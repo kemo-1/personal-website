@@ -1,16 +1,39 @@
 ---
-
+// Component imports at the top
+import Image from "astro/components/Image.astro";
+import image from "../assets/photo.jpg";
+import "../styles/global.css";
+import Box from "../components/Box.astro";
+import Scroll from "../components/Scroll.astro";
 ---
-
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+<body dir="rtl" lang="ar" >
+
+
+      <Image
+        src={image}
+        alt="Circular Image"
+           class="mb-10 mask mask-squircle ms-10 w-100"
+      />
+
+    
+
+      <Scroll />
+      
+ 
+      <Image
+        src={image}
+        alt="Circular Image"
+           class="mb-10 mask mask-squircle ms-10 w-100"
+      />
+
+</body>
+
+
+</html>	

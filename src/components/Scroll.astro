@@ -1,0 +1,110 @@
+<section class="content fluid">
+    <h2><span aria-hidden="true">أنا مهتم&nbsp;</span></h2>
+    <ul aria-hidden="true" style="--count: 3">
+      <li style="--i: 0; --c: rgb(204 187 255)">بالبرمجة.</li>
+      <li style="--i: 1; --c: blue">بالتصميم.</li> 
+      <li style="--i: 2; --c: green">بحل المشاكل التقنية.</li>
+    </ul>
+  </section>
+
+  <script type="module">
+    import gsap from 'gsap'
+    import ScrollTrigger from 'gsap/ScrollTrigger'
+
+    const config = {
+      theme: 'dark',
+      animate: true,
+      snap: false,
+      scroll: true,
+      debug: false,
+    }
+
+    let items = gsap.utils.toArray('ul li')
+    let dimmerScrub, chromaEntry, chromaExit
+
+    const setCSSVars = () => {
+      const root = document.documentElement
+      root.dataset.theme = config.theme
+      root.dataset.syncScrollbar = config.scroll
+      root.dataset.animate = config.animate
+      root.dataset.snap = config.snap
+      root.dataset.debug = config.debug
+    }
+
+    const setupGSAPAnimations = () => {
+      gsap.registerPlugin(ScrollTrigger)
+
+      gsap.set(items, { opacity: i => (i === 0 ? 1 : 0.2) })
+
+      const dimmer = gsap.timeline()
+        .to(items.slice(1), { opacity: 1, stagger: 0.5 })
+        .to(items.slice(0, -1), { opacity: 0.2, stagger: 0.5 }, 0)
+
+      dimmerScrub = ScrollTrigger.create({
+        trigger: items[0],
+        endTrigger: items.at(-1),
+        start: 'center center',
+        end: 'center center',
+        animation: dimmer,
+        scrub: 0.2,
+      })
+
+      chromaEntry = gsap.fromTo(
+        document.documentElement,
+        { '--chroma': 0 },
+        {
+          '--chroma': 0.3,
+          ease: 'none',
+          scrollTrigger: {
+            scrub: 0.2,
+            trigger: items[0],
+            start: 'center center+=40',
+            end: 'center center',
+          },
+        }
+      )
+
+      chromaExit = gsap.fromTo(
+        document.documentElement,
+        { '--chroma': 0.3 },
+        {
+          '--chroma': 0,
+          ease: 'none',
+          scrollTrigger: {
+            scrub: 0.2,
+            trigger: items[items.length - 2],
+            start: 'center center',
+            end: 'center center-=40',
+          },
+        }
+      )
+    }
+
+    const update = () => {
+      setCSSVars()
+
+      if (!config.animate) {
+        gsap.set(items, { opacity: 1 })
+        gsap.set(document.documentElement, { '--chroma': 0 })
+        [dimmerScrub, chromaEntry?.scrollTrigger, chromaExit?.scrollTrigger]
+          .forEach(trigger => trigger?.disable?.(true, false))
+      } else {
+        gsap.set(items, { opacity: i => (i === 0 ? 1 : 0.2) })
+        [dimmerScrub, chromaEntry.scrollTrigger, chromaExit.scrollTrigger]
+          .forEach(trigger => trigger?.enable?.(true, true))
+      }
+    }
+
+    const sync = (event) => {
+      if (!document.startViewTransition || event?.target?.controller?.view?.labelElement?.innerText !== 'Theme') {
+        return update()
+      }
+      document.startViewTransition(update)
+    }
+
+    if (!CSS.supports('(animation-timeline: scroll()) and (animation-range: 0% 100%)')) {
+      setupGSAPAnimations()
+    }
+
+    update()
+  </script>
