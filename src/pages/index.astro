@@ -7,31 +7,67 @@ import Box from "../components/Box.astro";
 import Scroll from "../components/Scroll.astro";
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html  dir="rtl" lang="ar" >
 <head>
     <meta charset="UTF-8">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
 </head>
-<body dir="rtl" lang="ar" >
+<body>
 
-
+  <div class="flex w-full flex-col lg:flex-row">
       <Image
         src={image}
         alt="Circular Image"
            class="mb-10 mask mask-squircle ms-10 w-100"
       />
 
-    
 
-      <Scroll />
+<div class=" lg:divider-horizontal divider"></div>
+
+  <!-- name of each tab group should be unique -->
+<div class="tabs tabs-lift tabs-top">
+  <input type="radio" name="my_tabs_5" class="tab" aria-label="Tab 1" />
+  <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 1</div>
+
+  <input type="radio" name="my_tabs_5" class="tab" aria-label="Tab 2" checked="checked" />
+  <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 2</div>
+
+  <input type="radio" name="my_tabs_5" class="tab" aria-label="Tab 3" />
+  <div class="tab-content bg-base-100 border-base-300 p-6">Tab content 3</div>
+</div>
       
- 
-      <Image
-        src={image}
-        alt="Circular Image"
-           class="mb-10 mask mask-squircle ms-10 w-100"
-      />
+
+  </div> 
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+     <Scroll />
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>  
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
 
 </body>
 
