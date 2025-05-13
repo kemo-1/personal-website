@@ -1,0 +1,80 @@
+---
+import Image from "astro/components/Image.astro";
+import image from "../assets/photo.jpg";
+---
+
+<div class="flex w-full flex-col lg:flex-row">
+  <Image
+    src={image}
+    alt="Circular Image"
+    class="mb-10 mask mask-squircle ms-10 w-100"
+  />
+
+  <div class="lg:divider-horizontal divider"></div>
+<div>
+  <h1 class="sea-text text-6xl">عبدالحكيم الشنقيطي</h1>
+
+
+  <h2 class="sea-text text-5xl">مطور مواقع</h2>
+
+
+  <p>
+    كلام كلام كلام كلام كلام كلام كلام كلام كلام كلام كلام كلام كلام كلام كلام
+    كلام كلام كلام كلام كلام
+  </p>
+
+</div>
+</div>
+
+<style>
+  .mask-squircle {
+    animation: float 4s ease-in-out infinite;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
+  }
+
+  /* Keyframes */
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(20px);
+    }
+  }
+
+
+
+
+  .sea-text {
+  position: relative;
+  display: block; /* Changed from inline-block */
+  color: transparent;
+  background: linear-gradient(90deg, #0a3d62, #3c6382, #6a89cc, #82ccdd);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: seaAnimation 3s ease infinite;
+  line-height: 1.2; /* Added line-height */
+  padding-bottom: 4px; /* Added padding for Arabic script */
+  margin: 0.5em 0; /* Added margin for spacing */
+}
+
+/* Add these adjustments for Arabic text alignment */
+
+
+
+@keyframes seaAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+</style>
