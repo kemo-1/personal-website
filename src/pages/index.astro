@@ -6,23 +6,87 @@ import Box from "../components/Box.astro";
 import Scroll from "../components/Scroll.astro";
 import Hero from "../components/Hero.astro";
 ---
-<!DOCTYPE html>
-<html  dir="rtl" lang="ar" >
-<head>
-    <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!doctype html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+    <br /><br />
+    <Hero />
+    <br /><br /><br />
+
+    <Scroll />
+
+  <br /><br /><br /><br /><br /><br />
+
+<div class="text-center mt-10">
+  <h2 class="text-4xl font-bold text-primary" id="websites">🌐 المواقع التي قمت بتطوريها</h2>
+  <br />
+  <p class="text-lg text-base-content mt-2">
+      هذه المواقع تتم استضافتها مجانا
+    
+     على العميل فقط شراء اسم نطاق لموقعه  قمت بشراء اسم نطاق لي ولعملائي من خلال منصة   <a class="link link-accent text-2xl link-hover" href="https://dnet.sa"> dnet.sa</a>
+  </p>
+
+</div>
+
+<div class="carousel rounded-box ms-[5vw] mt-10 w-[80vw] h-[100vh]">
+  <!-- Slide 1 -->
+  <div id="slide1" class="carousel-item relative w-full">
+    <div class="mockup-browser border-base-300 border w-full h-full flex flex-col">
+      <div class="mockup-browser-toolbar shrink-0 h-12 flex items-center justify-center">
+        <div class="text-2xl">https://hthkia.com</div>
+      </div>
+      <div class="border-t border-base-300 flex-grow flex">
+        <iframe src="https://hthkia.com/" class="w-full h-full border-none"></iframe>
+      </div>
+    </div>
+    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+      <span></span>
+      <a href="#slide2" class="btn btn-lg btn-primary btn-circle">❯</a>
+    </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div id="slide2" class="carousel-item relative w-full">
+    <div class="mockup-browser border-base-300 border w-full h-full flex flex-col">
+      <div class="mockup-browser-toolbar shrink-0 h-12 flex items-center justify-center">
+        <div class="text-2xl">https://moftah-alnakheel.sa</div>
+      </div>
+      <div class="border-t border-base-300 flex-grow flex">
+        <iframe src="https://moftah-alnakheel.sa/" class="w-full h-full border-none"></iframe>
+      </div>
+    </div>
+    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+      <a href="#slide1" class="btn btn-lg btn-primary btn-circle">❮</a>
+      <a href="#slide3" class="btn btn-lg btn-primary btn-circle">❯</a>
+    </div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div id="slide3" class="carousel-item relative w-full">
+    <div class="mockup-browser border-base-300 border w-full h-full flex flex-col">
+      <div class="mockup-browser-toolbar shrink-0 h-12 flex items-center justify-center">
+        <div class="text-2xl">https://key-and-lock.com</div>
+      </div>
+      <div class="border-t border-base-300 flex-grow flex">
+        <iframe src="https://key-and-lock.com/" class="w-full h-full border-none"></iframe>
+      </div>
+    </div>
+    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+      <a href="#slide2" class="btn btn-lg btn-primary btn-circle">❮</a>
+      <span></span>
+    </div>
+  </div>
+</div>
 
 
-      <Hero/>
 
-
-     <Scroll />
-
-     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</body>
- 
-
-</html>	
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
+    /><br /><br />
+  </body>
+</html>
