@@ -12,81 +12,198 @@ import Hero from "../components/Hero.astro";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Document</title>
+    <title>عبدالحكيم الشنقيطي | مطور مواقع محترف في السعودية</title>
+    <meta name="description" content="أنا عبدالحكيم الشنقيطي، مطور مواقع محترف أُقدّم خدمات تطوير واستضافة المواقع في السعودية. تصفح نماذج من أعمالي وتواصل معي لبدء مشروعك الرقمي." />
+    <meta name="keywords" content="مطور مواقع, تصميم مواقع, تطوير مواقع, مواقع ووردبريس, استضافة مواقع, مطور ويب سعودي, عبدالحكيم الشنقيطي" />
+    <meta name="author" content="عبدالحكيم الشنقيطي" />
+    <meta property="og:title" content="عبدالحكيم الشنقيطي | مطور مواقع محترف" />
+    <meta property="og:description" content="أعمال احترافية في تطوير وتصميم المواقع الإلكترونية." />
+
+    <meta property="og:url" content="https://abdulhakim-alshanqiti.sa" />
+    <meta property="og:type" content="website" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+    <link rel="canonical" href="https://abdulhakim-alshanqiti.sa" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   </head>
   <body>
+    <style>
+			.whatsapp-button {
+				position: fixed;
+				left: 20px;
+				bottom: 20px;
+				background-color: #25D366;
+				color: white;
+				border-radius: 50px;
+				padding: 10px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-decoration: none;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+				z-index: 1000;
+				transition: all 0.3s ease;
+				width: 50px;
+				height: 50px;
+				overflow: hidden;
+			}
+			
+			.whatsapp-button:hover {
+				width: auto;
+				padding: 10px 20px;
+			}
+			
+			.whatsapp-button .icon {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 30px;
+				height: 30px;
+				min-width: 30px; /* Ensures the icon doesn't shrink */
+			}
+			
+			.whatsapp-button .text {
+				opacity: 0;
+				max-width: 0;
+				white-space: nowrap;
+				margin-right: 0;
+				transition: all 0.3s ease;
+				overflow: hidden;
+			}
+			
+			.whatsapp-button:hover .text {
+				opacity: 1;
+				max-width: 200px;
+				margin-left: 10px;
+			}
+
+	.map-button {
+		position: fixed;
+		right: 20px;
+		bottom: 20px;
+		background-color: #c0392b;
+		color: white;
+		border-radius: 50px;
+		padding: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		z-index: 1000;
+		transition: all 0.3s ease;
+		width: 50px;
+		height: 50px;
+		overflow: hidden;
+	}
+	
+	.map-button:hover {
+		width: auto;
+		padding: 10px 20px;
+	}
+	
+	.map-button .icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 30px;
+		height: 30px;
+		min-width: 30px; /* Ensures the icon doesn't shrink */
+	}
+	
+	.map-button .text {
+		opacity: 0;
+		max-width: 0;
+		white-space: nowrap;
+		margin-left: 0;
+		transition: all 0.3s ease;
+		overflow: hidden;
+	}
+	
+	.map-button:hover .text {
+		opacity: 1;
+		max-width: 400px;
+		margin-left: 10px;
+	}
+</style>
     <br /><br />
     <Hero />
     <br /><br /><br />
-
     <Scroll />
+    <br /><br /><br /><br /><br /><br />
 
-  <br /><br /><br /><br /><br /><br />
+    <div class="text-center mt-10">
+      <h2 class="text-4xl font-bold text-primary" id="websites">🌐 أعمالي في تطوير المواقع</h2>
+      <br />
+      <p class="text-lg text-base-content mt-2">
+        هذه عينة من المواقع التي قمت بتطويرها. يتم استضافتها مجانًا، ويحتاج العميل فقط لشراء اسم نطاق من منصة 
+        <a class="link link-accent text-2xl link-hover" href="https://dnet.sa">dnet.sa</a>.
+      </p>
+    </div>
 
-<div class="text-center mt-10">
-  <h2 class="text-4xl font-bold text-primary" id="websites">🌐 المواقع التي قمت بتطوريها</h2>
-  <br />
-  <p class="text-lg text-base-content mt-2">
-      هذه المواقع تتم استضافتها مجانا
-    
-     على العميل فقط شراء اسم نطاق لموقعه  قمت بشراء اسم نطاق لي ولعملائي من خلال منصة   <a class="link link-accent text-2xl link-hover" href="https://dnet.sa"> dnet.sa</a>
-  </p>
-
-</div>
-
-<div class="carousel rounded-box ms-[5vw] mt-10 w-[80vw] h-[100vh]">
-  <!-- Slide 1 -->
-  <div id="slide1" class="carousel-item relative w-full">
-    <div class="mockup-browser border-base-300 border w-full h-full flex flex-col">
-      <div class="mockup-browser-toolbar shrink-0 h-12 flex items-center justify-center">
-        <div class="text-2xl">https://hthkia.com</div>
+    <div class="carousel rounded-box ms-[5vw] mt-10 w-[80vw] h-[100vh]">
+      <div id="slide1" class="carousel-item relative w-full">
+        <div class="mockup-browser border-base-300 border w-full h-full flex flex-col">
+          <div class="mockup-browser-toolbar shrink-0 h-12 flex items-center justify-center">
+            <div class="text-2xl">https://hthkia.com</div>
+          </div>
+          <div class="border-t border-base-300 flex-grow flex">
+            <iframe src="https://hthkia.com/" class="w-full h-full border-none"></iframe>
+          </div>
+        </div>
+        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <span></span>
+          <a href="#slide2" class="btn btn-lg btn-primary btn-circle">❯</a>
+        </div>
       </div>
-      <div class="border-t border-base-300 flex-grow flex">
-        <iframe src="https://hthkia.com/" class="w-full h-full border-none"></iframe>
+
+      <div id="slide2" class="carousel-item relative w-full">
+        <div class="mockup-browser border-base-300 border w-full h-full flex flex-col">
+          <div class="mockup-browser-toolbar shrink-0 h-12 flex items-center justify-center">
+            <div class="text-2xl">https://moftah-alnakheel.sa</div>
+          </div>
+          <div class="border-t border-base-300 flex-grow flex">
+            <iframe src="https://moftah-alnakheel.sa/" class="w-full h-full border-none"></iframe>
+          </div>
+        </div>
+        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <a href="#slide1" class="btn btn-lg btn-primary btn-circle">❮</a>
+          <a href="#slide3" class="btn btn-lg btn-primary btn-circle">❯</a>
+        </div>
+      </div>
+
+      <div id="slide3" class="carousel-item relative w-full">
+        <div class="mockup-browser border-base-300 border w-full h-full flex flex-col">
+          <div class="mockup-browser-toolbar shrink-0 h-12 flex items-center justify-center">
+            <div class="text-2xl">https://key-and-lock.com</div>
+          </div>
+          <div class="border-t border-base-300 flex-grow flex">
+            <iframe src="https://key-and-lock.com/" class="w-full h-full border-none"></iframe>
+          </div>
+        </div>
+        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <a href="#slide2" class="btn btn-lg btn-primary btn-circle">❮</a>
+          <span></span>
+        </div>
       </div>
     </div>
-    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-      <span></span>
-      <a href="#slide2" class="btn btn-lg btn-primary btn-circle">❯</a>
-    </div>
-  </div>
-
-  <!-- Slide 2 -->
-  <div id="slide2" class="carousel-item relative w-full">
-    <div class="mockup-browser border-base-300 border w-full h-full flex flex-col">
-      <div class="mockup-browser-toolbar shrink-0 h-12 flex items-center justify-center">
-        <div class="text-2xl">https://moftah-alnakheel.sa</div>
-      </div>
-      <div class="border-t border-base-300 flex-grow flex">
-        <iframe src="https://moftah-alnakheel.sa/" class="w-full h-full border-none"></iframe>
-      </div>
-    </div>
-    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-      <a href="#slide1" class="btn btn-lg btn-primary btn-circle">❮</a>
-      <a href="#slide3" class="btn btn-lg btn-primary btn-circle">❯</a>
-    </div>
-  </div>
-
-  <!-- Slide 3 -->
-  <div id="slide3" class="carousel-item relative w-full">
-    <div class="mockup-browser border-base-300 border w-full h-full flex flex-col">
-      <div class="mockup-browser-toolbar shrink-0 h-12 flex items-center justify-center">
-        <div class="text-2xl">https://key-and-lock.com</div>
-      </div>
-      <div class="border-t border-base-300 flex-grow flex">
-        <iframe src="https://key-and-lock.com/" class="w-full h-full border-none"></iframe>
-      </div>
-    </div>
-    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-      <a href="#slide2" class="btn btn-lg btn-primary btn-circle">❮</a>
-      <span></span>
-    </div>
-  </div>
-</div>
-
-
-
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br
-    /><br /><br />
+		<a href="https://wa.me/+966542140105" class="whatsapp-button" target="_blank">
+			<span class="text">    تواصل معي على الواتساب    </span>
+			<span class="icon">
+				
+				<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="white">
+					<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+				</svg>
+				<!-- <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="white">
+					<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+				</svg> -->
+			</span>
+		</a>
+    <footer class="text-center mt-20 p-4 text-sm text-base-content">
+      <p>© 2025 عبدالحكيم الشنقيطي - مطور مواقع محترف في السعودية</p>
+      <p>للإيميل : <a href="mailto:info@abdulhakim-alshanqiti.sa">info@abdulhakim-alshanqiti.sa</a> | تواصل معي على الواتساب <a href="https://wa.me/+966542140105"> 966542140105+ </a></p>
+    </footer>
   </body>
 </html>
